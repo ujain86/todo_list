@@ -5,6 +5,32 @@
     </head>
 
     <body>
-        <h1> Home Page Rendered</h1>
+        <div>
+        <h1 id="heading"> TODO App</h1>
+        <div id="form">
+            <form action="/create-task" method="post">
+                <label for="description">Description</label>
+                <input name="description" id="description" type="text" placeholder="What do you need to do">
+                <label for="category">Category</label>
+                <select name="category" id="category" type="dropdown">
+                    <option>Personal</option>
+                    <option >work</option>
+
+                </select>
+                <label for="due_date">Due Date</label>
+                <input name="due_date" id="due_date" type="date">
+                <button class="btn">Add Task</button>
+                <!-- <button class="btn">Delete Tasks</button> -->
+            </form>
+        </div>
+
+        <div class="list">
+            <ul>
+               <% for( let i of todo_list){ %>
+                    <li> <%= i.description%></li>
+                <% } %>
+            </ul>
+        </div>
+        </div>
     </body>
 </html>
