@@ -1,0 +1,113 @@
+/* Set body background color */
+body{
+    background-color: rgba(49, 6, 6, 0.678);
+}
+
+/* Apply css to todo application */
+#app{
+    margin: 0;
+    margin: 10px auto;
+    height: auto;
+    width: 500px;
+    border: 1px solid black;
+    background-color: white;
+}
+
+/* Adding style to heading */
+#heading{
+    border-bottom: 1px solid gray;
+    height: 10%;
+    text-align: center;
+}
+
+/* Classes for width */
+.width-100{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid gray;
+}
+
+.width-50{
+    width: 49.5%;
+    padding: 10px;
+    display: inline-block;
+    border: none;
+    border-bottom: 1px solid gray;
+    color: gray
+}
+
+/* Adding style to button */
+button{
+    width: 50%;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    margin: 20px 100px;
+    cursor: pointer;
+    font-size: medium;
+    background-color: black;
+}
+
+/* Adding style to labels */
+label{
+    color: gray;
+    margin-left: 10px;
+    display: inline-block;
+    width: 47%;
+    margin-top: 5px;
+}
+
+/* Adding style to input elements when focused */
+input:focus-within{
+    background-color: azure;
+}
+
+/* Adding style to select element when focused */
+select:focus{
+    background-color: azure;
+}
+
+/* Adding style to list items */
+li{
+   color: gray; 
+   font-family: sans-serif;
+   list-style-type: none;
+   border-top : 1px solid gray;
+   width: 90%;
+   box-sizing: border-box;
+}
+
+#li-description{
+    font-weight: 700;
+}
+
+#li-category{
+    width: 20%;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    margin-top: -30px;
+    margin-left: 250px;
+    display: inline-block;
+}
+
+#li-due-date{
+    margin-top: -30px ;
+    font-weight: 10;
+    font-size: small;
+}
+
+i{
+    margin-right: 10px;
+}
+
+a{
+    display: inline-block;
+    margin: -45px 10px 10px 400px;
+    color: red;
+    text-decoration: none;
+    
+}
+
+

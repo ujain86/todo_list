@@ -1,4 +1,6 @@
 const mongoose = require('mongoose');
+
+//Creating schema of database document
 const todoSchema = new mongoose.Schema({
     description: {
         type: String,
@@ -8,7 +10,12 @@ const todoSchema = new mongoose.Schema({
     category: {
         type: String,
         required: true,
-    }
+    },
+
+    dueDate: {
+        type: String,
+        required: true,
+    },
 });
 
 const Todo = mongoose.model('Todo', todoSchema);

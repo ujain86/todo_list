@@ -1,6 +1,8 @@
+const { findByIdAndDelete } = require("../models/todo");
 const Todo = require("../models/todo");
 
 
+//Home Function
 module.exports.home = function(req,res){
     // res.end('<h1>Hello</h1>');
     // res.render('home',{
@@ -13,7 +15,7 @@ module.exports.home = function(req,res){
             return;
         };
         
-        return res.render('home', {
+        return res.render('home2', {
             title : 'Todo List',
             todo_list : list,
         });
@@ -21,10 +23,12 @@ module.exports.home = function(req,res){
     });
 }
 
+//Create Task function
 module.exports.create = function(req,res){
     Todo.create({
         description: req.body.description,
         category: req.body.category,
+        dueDate: req.body.due_date,
     },function(err, newTask){
         if(err){
             console.log('Error in creating new task');
@@ -34,6 +38,17 @@ module.exports.create = function(req,res){
         console.log('*****', newTask);
         return res.redirect('back');
     });
-    // console.log(req.body.description);
     
-}
+};
+
+//Delete task function
+module.exports.delete = function(req,res){
+    let id = req.query.id;
+    Todo.findByIdAndDelete(id, function(err){
+    if(err){
+        console.log('Error in deleting task');
+        return;
+    }
+        return res.redirect('back');
+   });
+};
